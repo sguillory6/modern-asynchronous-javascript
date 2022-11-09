@@ -7,9 +7,9 @@
  * Visit https://pragprog.com/titles/fkajs for more book information.
 ***/
 const promises = [
-  fetch('https://picsum.photos/200', {mode: "no-cors"}),
-  fetch('https://does-not-exist', {mode: "no-cors"}),
-  fetch('https://picsum.photos/100/200', {mode: "no-cors"})
+  fetch('https://picsum.photos/200', {mode: "cors"}),
+  fetch('https://does-not-exist', {mode: "cors"}),
+  fetch('https://picsum.photos/100/200', {mode: "cors"})
 ].map(p => p.catch(e => e)); 
 
 Promise.all(promises).
