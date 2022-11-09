@@ -14,6 +14,8 @@ promise.then(null, (error) => {
 });
 
 // only handle fulfillment 
-promise.then((result) => {
-  console.log(result);
+promise.then((response) => {
+  return response.json();
+}).then(function (data) {
+  console.log(data);
 });
